@@ -8,9 +8,9 @@ Implementação do AES-128 feita do zero em C++, sem biblioteca externa no núcl
 
 | Integrante | Responsabilidade |
 |---|---|
-| Integrante 1 - [nome] | Transformações básicas: SubBytes, ShiftRows, MixColumns e AddRoundKey |
-| Integrante 2 - [nome] | Expansão de chave, funções inversas, cifração/decifração e T-Tables |
-| Integrante 3 - [nome] | Validação com vetores do NIST, benchmark e documentação |
+| Integrante 1 - Karol Luiza | Transformações básicas: SubBytes, ShiftRows, MixColumns e AddRoundKey |
+| Integrante 2 - Rafaella Gonzales | Expansão de chave, funções inversas, cifração/decifração e T-Tables |
+| Integrante 3 - Gabriel Furlan | Validação com vetores do NIST, benchmark e documentação |
 
 ## Estrutura do repositório
 
