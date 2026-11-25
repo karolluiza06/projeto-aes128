@@ -44,9 +44,8 @@ int main() {
 
     std::cout << "=== Validacao AES-128 (Vetores Oficiais NIST FIPS-197) ===\n\n";
 
-    // -------------------------------------------------------------------------
     // 1. Apendice A.1 - Expansao de chave (verificando a 11a subchave / rodada 10)
-    // -------------------------------------------------------------------------
+
     unsigned char chaveB[16] = {
         0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6,
         0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c
@@ -60,9 +59,7 @@ int main() {
     tudoCerto &= verificarBloco("FIPS-197 Apendice A.1 - Expansao de Chave (Rodada 10)",
                                 chavesRodada + 16 * 10, subchave10Esperada);
 
-    // -------------------------------------------------------------------------
     // 2. Apendice B - Exemplo de Cifracao
-    // -------------------------------------------------------------------------
     unsigned char claroB[16] = {
         0x32, 0x43, 0xf6, 0xa8, 0x88, 0x5a, 0x30, 0x8d,
         0x31, 0x31, 0x98, 0xa2, 0xe0, 0x37, 0x07, 0x34
@@ -88,9 +85,8 @@ int main() {
     tudoCerto &= verificarBloco("FIPS-197 Apendice B   - Decifracao (decifrar(cifrar(M)) == M)",
                                 decifrado, claroB);
 
-    // -------------------------------------------------------------------------
     // 3. Apendice C.1 - Vetor de Teste AES-128
-    // -------------------------------------------------------------------------
+   
     unsigned char chaveC1[16] = {
         0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07,
         0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f
@@ -118,9 +114,7 @@ int main() {
     tudoCerto &= verificarBloco("FIPS-197 Apendice C.1 - Decifracao (decifrar(cifrar(M)) == M)",
                                 decifrado, claroC1);
 
-    // -------------------------------------------------------------------------
     // 4. Teste de consistencia em 1.000 blocos aleatorios + operacao in-place
-    // -------------------------------------------------------------------------
     std::mt19937 rng(42);
     std::uniform_int_distribution<int> dist(0, 255);
     bool consistenciaOk = true;
