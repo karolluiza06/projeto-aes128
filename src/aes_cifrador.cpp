@@ -3,7 +3,7 @@
 
 namespace {
 
-// xtime proprio: o multiplicarPorDois do Integrante 1 nao esta no header dele
+// xtime proprio
 unsigned char xtime(unsigned char valor) {
     unsigned char deslocado = static_cast<unsigned char>(valor << 1);
     if (valor & 0x80) {
@@ -40,7 +40,7 @@ const unsigned char RCON[10] = {
     0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36
 };
 
-} // namespace
+} 
 
 void expandirChave(const unsigned char chaveInicial[16], unsigned char chavesRodada[176]) {
     for (int i = 0; i < 16; i++) {
